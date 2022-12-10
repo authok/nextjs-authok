@@ -298,7 +298,7 @@ For end to end tests, have a look at how we use a [mock OIDC Provider](./scripts
 # 部署
 参考 [如何将示例应用程序部署到 Vercel](./examples/README.md).
 
-## Contributing
+## 捐献
 
 We appreciate feedback and contribution to this repo! Before you get started, please read the following:
 
@@ -310,7 +310,7 @@ We appreciate feedback and contribution to this repo! Before you get started, pl
 
 Please do not report security vulnerabilities on the public GitHub issue tracker. The [Responsible Disclosure Program](https://authok.cn/responsible-disclosure-policy) details the procedure for disclosing security issues.
 
-## What is Authok?
+## Authok 是什么?
 
 <p align="center">
   <picture>
