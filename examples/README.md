@@ -2,20 +2,20 @@
 
 In this folder we'll be showing off different examples on how to use the [@authok/nextjs-authok](https://www.npmjs.com/package/@authok/nextjs-authok) package in your Next.js applications.
 
-## Configuration
+## 配置
 
-### Local Development
+### 本地开发
 
-#### Configuring Authok
+#### 配置 Authok
 
 Go to the [Authok dashboard](https://mgmt.authok.cn/) and create a new application of type **Web Application** and make sure to configure the following:
 
-| Setting               | Description                                                                                                                                                            |
+| 设置               | 描述                                                                                                                                                            |
 | --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Allowed Callback URLs | Should be set to `http://localhost:3000/api/auth/callback` when testing locally or typically to `https://myapp.com/api/auth/callback` when deploying your application. |
 | Allowed Logout URLs   | Should be set to `http://localhost:3000/` when testing locally or typically to `https://myapp.com/` when deploying your application.                                   |
 
-#### Environment Variables
+#### 环境变量
 
 For local development you'll just want to create a `.env.local` file with the necessary settings:
 
