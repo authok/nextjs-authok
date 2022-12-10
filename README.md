@@ -83,7 +83,7 @@ node -e "console.log(crypto.randomBytes(32).toString('hex'))"
 
 > For more details about loading environment variables in Next.js, visit the ["Environment Variables"](https://nextjs.org/docs/basic-features/environment-variables) document.
 
-#### Add the Dynamic API Route
+#### 添加动态 API 路由
 
 Go to your Next.js application and create a [catch-all, dynamic API route handler](https://nextjs.org/docs/api-routes/dynamic-api-routes#optional-catch-all-api-routes) under the `/pages/api` directory:
 
