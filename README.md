@@ -31,7 +31,7 @@ The Authok Next.js SDK is a library for implementing user authentication in Next
 npm install @authok/nextjs-authok
 ```
 
-This library supports the following tooling versions:
+本模块支持以下核心库版本:
 
 - Node.js: 12 LTS and newer LTS releases are supported.
 - Next.js: `>=10`
@@ -42,10 +42,10 @@ This library supports the following tooling versions:
 
 > **If you're using an existing application**, verify that you have configured the following settings in your Regular Web Application:
 >
-> - Click on the "Settings" tab of your application's page.
-> - Scroll down and click on the "Show Advanced Settings" link.
-> - Under "Advanced Settings", click on the "OAuth" tab.
-> - Ensure that "JsonWebToken Signature Algorithm" is set to `RS256` and that "OIDC Conformant" is enabled.
+> - 在应用页面点击 "设置" 标签.
+> - 点击 "显示高级设置" 链接.
+> - 在 "高级设置" 中, 点击 "OAuth" 标签页.
+> - 确保 "JsonWebToken 签名算法" 设置为 `RS256` 还有 "OIDC Conformant" 被启用.
 
 接下来, 在 "设置" 页面 的 "应用 URIs" 部分配置如下 URL:
 
@@ -58,7 +58,7 @@ This library supports the following tooling versions:
 
 #### 配置应用
 
-You need to allow your Next.js application to communicate properly with Authok. You can do so by creating a `.env.local` file under your root project directory that defines the necessary Authok configuration values as follows:
+你需要允许你的 Next.js 应用 与 Authok 正确通信. 你可以在项目根目录下创建 `.env.local` 文件, 该文件定义了必要的 Authok 配置:
 
 ```bash
 # A long, secret value used to encrypt the session cookie
