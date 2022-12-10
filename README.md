@@ -126,7 +126,7 @@ export default function App({ Component, pageProps }) {
 
 #### Consume Authentication
 
-You can now determine if a user is authenticated by checking that the `user` object returned by the `useUser()` hook is defined. You can also log in or log out your users from the frontend layer of your Next.js application by redirecting them to the appropriate automatically-generated route:
+现在，你可以通过检查 `useUser()` 返回的 `user` 对象是否已定义来确定用户是否通过身份验证. 你还可以从 Next.js 应用的前端来 登录 或 注销用户(通过重定向到对应的自动生成的路由):
 
 ```jsx
 // pages/index.js
@@ -154,9 +154,9 @@ export default function Index() {
 
 There are two additional ways to check for an authenticated user; one for Next.js pages using [withPageAuthRequired](https://authok.github.io/nextjs-authok/modules/helpers_with_page_auth_required.html#withpageauthrequired) and one for Next.js API routes using [withAPIAuthRequired](https://authok.github.io/nextjs-authok/modules/helpers_with_api_auth_required.html#withapiauthrequired).
 
-For other comprehensive examples, see the [EXAMPLES.md](https://github.com/authok/nextjs-authok/blob/main/EXAMPLES.md) document.
+其它综合示例, 参考 [EXAMPLES.md](https://github.com/authok/nextjs-authok/blob/main/EXAMPLES.md) 文档.
 
-## API Reference
+## API 参考
 
 ### Server (for Node.js)
 
@@ -198,7 +198,7 @@ For other comprehensive examples, see the [EXAMPLES.md](https://github.com/autho
 
 - [generateSessionCookie](https://authok.github.io/nextjs-authok/modules/helpers_testing.html#generatesessioncookie)
 
-Visit the auto-generated [API Docs](https://authok.github.io/nextjs-authok/) for more details
+参考自动生成的 [API 文档](https://authok.github.io/nextjs-authok/) 获取更多细节
 
 ### Cookies and Security
 
