@@ -73,7 +73,7 @@ AUTHOK_CLIENT_ID='YOUR_AUTHOK_CLIENT_ID'
 AUTHOK_CLIENT_SECRET='YOUR_AUTHOK_CLIENT_SECRET'
 ```
 
-You can execute the following command to generate a suitable string for the `AUTHOK_SECRET` value:
+你可以执行以下命令来为 `AUTHOK_SECRET` 生成合适的值:
 
 ```bash
 node -e "console.log(crypto.randomBytes(32).toString('hex'))"
