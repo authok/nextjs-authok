@@ -1,0 +1,14 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 🤔 Help & Questions
+    url: https://community.authok.cn/c/sdks/5
+    about: Ask general support or usage questions in the Authok Community forums
+  - name: 📑 FAQ
+    url: https://github.com/authok/nextjs-authok/blob/main/FAQ.md
+    about: Check some commonly asked questions
+  - name: 🚀 Examples
+    url: https://github.com/authok/nextjs-authok/blob/main/EXAMPLES.md
+    about: Check the examples to get up to speed with the SDK
+  - name: 📖 API Documentation
+    url: https://authok.github.io/nextjs-authok/
+    about: Check the public API documentation for in-depth overview of all the available features

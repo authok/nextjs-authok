@@ -1,0 +1,12 @@
+{
+  "build": {
+    "env": {
+      "AUTHOK_DOMAIN": "YOUR_AUTHOK_DOMAIN",
+      "AUTHOK_CLIENT_ID": "YOUR_AUTHOK_CLIENT_ID",
+      "AUTHOK_CLIENT_SECRET": "@authok_client_secret",
+      "REDIRECT_URI": "https://my-website.now.sh/api/auth/callback",
+      "POST_LOGOUT_REDIRECT_URI": "https://my-website.now.sh/",
+      "SESSION_COOKIE_SECRET": "@session_cookie_secret"
+    }
+  }
+}
