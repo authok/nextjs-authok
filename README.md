@@ -85,13 +85,13 @@ node -e "console.log(crypto.randomBytes(32).toString('hex'))"
 
 #### 添加动态 API 路由
 
-Go to your Next.js application and create a [catch-all, dynamic API route handler](https://nextjs.org/docs/api-routes/dynamic-api-routes#optional-catch-all-api-routes) under the `/pages/api` directory:
+在 Next.js 应用的 `/pages/api` 目录中创建一个 [catch-all, dynamic API route handler](https://nextjs.org/docs/api-routes/dynamic-api-routes#optional-catch-all-api-routes):
 
-- Create an `auth` directory under the `/pages/api/` directory.
+- 在 `/pages/api/` 下创建一个 `auth` 目录.
 
-- Create a `[...authok].js` file under the newly created `auth` directory.
+- 在 `auth` 目录下 创建一个 `[...authok].js` 文件.
 
-The path to your dynamic API route file would be `/pages/api/auth/[...authok].js`. Populate that file as follows:
+访问 动态 API 路由文件 的路径为 `/pages/api/auth/[...authok].js`. 按如下方式填充该文件:
 
 ```js
 import { handleAuth } from '@authok/nextjs-authok';
