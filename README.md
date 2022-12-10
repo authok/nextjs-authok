@@ -79,7 +79,7 @@ AUTHOK_CLIENT_SECRET='YOUR_AUTHOK_CLIENT_SECRET'
 node -e "console.log(crypto.randomBytes(32).toString('hex'))"
 ```
 
-You can see a full list of Authok configuration options in the ["Configuration properties"](https://authok.github.io/nextjs-authok/modules/config.html#configuration-properties) section of the "Module config" document.
+你可以在 "模块配置" 文档的 ["Configuration properties"](https://authok.github.io/nextjs-authok/modules/config.html#configuration-properties)章节查看 Authok 配置选项的完整列表.
 
 > For more details about loading environment variables in Next.js, visit the ["Environment Variables"](https://nextjs.org/docs/basic-features/environment-variables) document.
 
