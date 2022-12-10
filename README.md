@@ -124,7 +124,7 @@ export default function App({ Component, pageProps }) {
 }
 ```
 
-#### Consume Authentication
+#### 使用身份认证
 
 现在，你可以通过检查 `useUser()` 返回的 `user` 对象是否已定义来确定用户是否通过身份验证. 你还可以从 Next.js 应用的前端来 登录 或 注销用户(通过重定向到对应的自动生成的路由):
 
