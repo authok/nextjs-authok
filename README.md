@@ -150,7 +150,7 @@ export default function Index() {
 }
 ```
 
-> Next linting rules might suggest using the `Link` component instead of an anchor tag. The `Link` component is meant to perform [client-side transitions between pages](https://nextjs.org/docs/api-reference/next/link). As the links point to an API route and not to a page, you should keep them as anchor tags.
+> Next linting rules 可以能建议使用 `Link` 组件来替代 a 标签. `Link` 组件会执行 [client-side transitions between pages](https://nextjs.org/docs/api-reference/next/link). 而链接指向的是 API 路由而不是页面, 因此你需要使用 a 标签.
 
 There are two additional ways to check for an authenticated user; one for Next.js pages using [withPageAuthRequired](https://authok.github.io/nextjs-authok/modules/helpers_with_page_auth_required.html#withpageauthrequired) and one for Next.js API routes using [withAPIAuthRequired](https://authok.github.io/nextjs-authok/modules/helpers_with_api_auth_required.html#withapiauthrequired).
 
