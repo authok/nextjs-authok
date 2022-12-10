@@ -99,16 +99,16 @@ import { handleAuth } from '@authok/nextjs-authok';
 export default handleAuth();
 ```
 
-Executing `handleAuth()` creates the following route handlers under the hood that perform different parts of the authentication flow:
+执行 `handleAuth()` 将在后台创建以下路由处理器，以之行身份验证流的不同部分:
 
-- `/api/auth/login`: Your Next.js application redirects users to your identity provider for them to log in (you can optionally pass a `returnTo` parameter to return to a custom relative URL after login, for example `/api/auth/login?returnTo=/profile`).
-- `/api/auth/callback`: Your identity provider redirects users to this route after they successfully log in.
-- `/api/auth/logout`: Your Next.js application logs out the user.
-- `/api/auth/me`: You can fetch user profile information in JSON format.
+- `/api/auth/login`: 你的 Next.js 应用重定向用户到身份提供者进行登录 (你可以传递一个可选参数 `returnTo`，用于在登录后跳转到自定义的相对URL, 例如 `/api/auth/login?returnTo=/profile`).
+- `/api/auth/callback`: 登录成功后，身份提供者重定向用户到此路由.
+- `/api/auth/logout`: Next.js 应用退登用户.
+- `/api/auth/me`: 用于获取JSON格式的用户详情.
 
-#### Add the UserProvider to Custom App
+#### 把 UserProvider 添加到 自定义 App
 
-Wrap your `pages/_app.js` component with the `UserProvider` component:
+用 `UserProvider` 组件来包装 `pages/_app.js` 组件:
 
 ```jsx
 // pages/_app.js
