@@ -275,7 +275,7 @@ export const getServerSideProps = (ctx) => {
 };
 ```
 
-### Comparison with the Authok React SDK
+### 对比 Authok React SDK
 
 We also provide an Authok React SDK, [authok-react](https://github.com/authok/authok-react), which may be suitable for your Next.js application.
 
