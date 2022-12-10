@@ -295,9 +295,8 @@ If you're using Jest, we recommend using `jest.resetModules()` after each test. 
 
 For end to end tests, have a look at how we use a [mock OIDC Provider](./scripts/oidc-provider.js).
 
-# Deploying
-
-For deploying, have a look at [how we deploy our example app to Vercel](./examples/README.md).
+# 部署
+参考 [如何将示例应用程序部署到 Vercel](./examples/README.md).
 
 ## Contributing
 
