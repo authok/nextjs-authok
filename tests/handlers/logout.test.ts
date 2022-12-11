@@ -26,7 +26,7 @@ describe('logout handler', () => {
         returnTo: 'http://www.acme.com',
         client_id: '__test_client_id__'
       },
-      pathname: '/v2/logout'
+      pathname: '/v1/logout'
     });
   });
 
@@ -50,7 +50,7 @@ describe('logout handler', () => {
         client_id: '__test_client_id__',
         foo: 'bar'
       },
-      pathname: '/v2/logout'
+      pathname: '/v1/logout'
     });
   });
 

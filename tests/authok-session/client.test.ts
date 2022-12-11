@@ -116,7 +116,7 @@ describe('clientFactory', function () {
       idpLogout: true
     });
     expect(client.endSessionUrl({ post_logout_redirect_uri: 'foo' })).toEqual(
-      'https://test.cn.authok.cn/v2/logout?returnTo=foo&client_id=__test_client_id__'
+      'https://test.cn.authok.cn/v1/logout?return_to=foo&client_id=__test_client_id__'
     );
   });
 

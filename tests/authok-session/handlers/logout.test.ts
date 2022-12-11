@@ -109,7 +109,7 @@ describe('logout route', () => {
     const redirect = parse(res.headers.location, true);
     expect(redirect).toMatchObject({
       hostname: 'test.cn.authok.cn',
-      pathname: '/v2/logout',
+      pathname: '/v1/logout',
       protocol: 'https:',
       query: expect.objectContaining({
         client_id: '__test_client_id__',
@@ -231,7 +231,7 @@ describe('logout route', () => {
     const redirect = parse(res.headers.location, true);
     expect(redirect).toMatchObject({
       hostname: 'op.example.com',
-      pathname: '/v2/logout',
+      pathname: '/v1/logout',
       protocol: 'https:',
       query: {
         client_id: defaultConfig.clientID,
@@ -260,7 +260,7 @@ describe('logout route', () => {
     const redirect = parse(res.headers.location, true);
     expect(redirect).toMatchObject({
       hostname: 'op.example.com',
-      pathname: '/v2/logout',
+      pathname: '/v1/logout',
       protocol: 'https:',
       query: {
         client_id: defaultConfig.clientID,

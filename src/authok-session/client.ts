@@ -100,7 +100,7 @@ export default function get(config: Config, { name, version }: Telemetry): Clien
         Object.defineProperty(client, 'endSessionUrl', {
           value(params: EndSessionParameters) {
             const { id_token_hint, post_logout_redirect_uri, ...extraParams } = params;
-            const parsedUrl: UrlObject = url.parse(urlJoin(issuer.metadata.issuer, '/v2/logout'));
+            const parsedUrl: UrlObject = url.parse(urlJoin(issuer.metadata.issuer, '/v1/logout'));
             parsedUrl.query = {
               ...extraParams,
               returnTo: post_logout_redirect_uri,

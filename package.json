@@ -1,6 +1,6 @@
 {
   "name": "@authok/nextjs-authok",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Next.js SDK for signing in with Authok",
   "exports": {
     ".": "./dist/index.js",
