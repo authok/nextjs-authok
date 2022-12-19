@@ -8,7 +8,7 @@
   - [保护客户端渲染(CSR)页面](#保护客户端渲染csr页面)
   - [保护 API 路由](#保护-api-路由)
   - [用中间件保护页面](#用中间件保护页面)
-  - [Access an External API from an API Route](#access-an-external-api-from-an-api-route)
+  - [从API路由访问外部API](#从api路由访问外部api)
     - [获取刷新令牌(Refresh Token)](#获取刷新令牌refresh-token)
   - [创建自己的SDK实例](#创建自己的sdk实例)
 - [Add a signup handler](#add-a-signup-handler)
@@ -278,7 +278,7 @@ export default authok.withMiddlewareAuthRequired(async function middleware(req) 
 });
 ```
 
-## Access an External API from an API Route
+## 从API路由访问外部API
 
 Get an access token by providing your API's audience and scopes. You can pass them directly to the `handlelogin` method, or use environment variables instead.
 
