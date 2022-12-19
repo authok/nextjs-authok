@@ -2,7 +2,7 @@
 
 - [示例](#示例)
   - [基本设置](#基本设置)
-  - [自定义处理器行为](#自定义处理器行为)
+  - [自定义处理程序行为](#自定义处理程序行为)
   - [使用自定义的身份验证URL](#使用自定义的身份验证url)
   - [保护 服务端渲染(SSR)页面](#保护-服务端渲染ssr页面)
   - [保护客户端渲染(CSR)页面](#保护客户端渲染csr页面)
@@ -11,7 +11,7 @@
   - [从API路由访问外部API](#从api路由访问外部api)
     - [获取刷新令牌(Refresh Token)](#获取刷新令牌refresh-token)
   - [创建自己的SDK实例](#创建自己的sdk实例)
-- [Add a signup handler](#add-a-signup-handler)
+- [添加注册处理程序](#添加注册处理程序)
   - [Use with Base Path and Internationalized Routing](#use-with-base-path-and-internationalized-routing)
 
 所有例子都可以在 [Kitchen Sink 示例应用](./examples/kitchen-sink-example) 中查看.
@@ -83,9 +83,9 @@ export default () => {
 
 查看 `basic-example` 应用 [./examples/basic-example](./examples/basic-example).
 
-## 自定义处理器行为
+## 自定义处理程序行为
 
-将自定义参数传递给 身份验证处理器 或 添加自己的 日志 和 错误处理.
+将自定义参数传递给 身份验证处理程序 或 添加自己的 日志 和 错误处理.
 
 ```js
 // pages/api/auth/[...authok].js
@@ -398,11 +398,11 @@ export default authok.handleAuth({
 });
 ```
 
-# Add a signup handler
+# 添加注册处理程序
 
-Pass a custom authorize parameter to the login handler in a custom route.
+在自定义路由中将自定义授权参数传递给登录处理程序.
 
-If you are using the [New Universal Login Experience](https://authok.cn/docs/universal-login/new-experience) you can pass the `screen_hint` parameter.
+如果你使用 [新的统一登录体验](https://authok.cn/docs/universal-login/new-experience) 你可以传递 `screen_hint` 参数.
 
 ```js
 // pages/api/auth/[...authok].js
