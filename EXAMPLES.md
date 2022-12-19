@@ -9,8 +9,8 @@
   - [Protect an API Route](#protect-an-api-route)
   - [Protecting pages with Middleware](#protecting-pages-with-middleware)
   - [Access an External API from an API Route](#access-an-external-api-from-an-api-route)
-    - [Getting a Refresh Token](#getting-a-refresh-token)
-  - [Create your own instance of the SDK](#create-your-own-instance-of-the-sdk)
+    - [获取刷新令牌(Refresh Token)](#获取刷新令牌refresh-token)
+  - [创建自己的SDK实例](#创建自己的sdk实例)
 - [Add a signup handler](#add-a-signup-handler)
   - [Use with Base Path and Internationalized Routing](#use-with-base-path-and-internationalized-routing)
 
@@ -297,8 +297,7 @@ export default handleAuth({
 });
 ```
 
-Use the session to protect your API route and the access token to protect your external API.
-The API route serves as a proxy between your front end and the external API.
+使用 session 来保护 API route, 使用 access token 来保护外部 API. API route 作为前端和外部API之间的代理.
 
 ```js
 // pages/api/products.js
@@ -320,15 +319,15 @@ export default withApiAuthRequired(async function products(req, res) {
 });
 ```
 
-See a running example of the [API route acting as a proxy to an External API](./examples/kitchen-sink-example/pages/api/shows.ts) in the kitchen-sink example app.
+在 kitchen-sink 示例应用中参考 [API route 扮演 外部API 的代理](./examples/kitchen-sink-example/pages/api/shows.ts).
 
-### Getting a Refresh Token
+### 获取刷新令牌(Refresh Token)
 
-- Include the `offline_access` scope your configuration (or `AUTHOK_SCOPE`)
-- Check "Allow Offline Access" in your [API Settings](https://authok.cn/docs/get-started/apis/api-settings#access-settings)
-- Make sure the "Refresh Token" grant is enabled in your [Application Settings](https://authok.cn/docs/get-started/applications/application-settings#grant-types) (this is the default)
+- 在你的配置中(`AUTHOK_SCOPE`)包含 `offline_access` scope
+- 在 [API 设置] 中勾选 "允许离线访问"(https://authok.cn/docs/get-started/apis/api-settings#access-settings)
+- 确保 [应用设置](https://authok.cn/docs/get-started/applications/application-settings#grant-types)中 "刷新令牌" 授权已开启(这是默认设置)
 
-## Create your own instance of the SDK
+## 创建自己的SDK实例
 
 When you use the named exports, the SDK creates an instance of the SDK for you and configures it with the provided environment variables.
 
@@ -348,10 +347,9 @@ import {
 } from '@authok/nextjs-authok';
 ```
 
-However, there are various reasons why you might want to create and manage an instance of the SDK yourself:
-
-- You may want to create your own instance for testing
-- You may not want to use environment variables for the configuration of secrets (eg using CredStash or AWS's Key Management Service)
+然而，您可能处于各种目的需要自行创建和管理SDK实例:
+- 您可能需要创建自己的实例进行测试
+- 您可能不想使用环境变量配置 secret（例如使用 CredStash 或 AWS的密钥管理服务）
 
 In this case you can use the [initAuthok](https://authok.github.io/nextjs-authok/modules/instance.html) method to create an instance.
 
