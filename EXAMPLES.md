@@ -326,7 +326,7 @@ export default withApiAuthRequired(async function products(req, res) {
 
 ## 创建自己的SDK实例
 
-When you use the named exports, the SDK creates an instance of the SDK for you and configures it with the provided environment variables.
+当您使用命名导出时，SDK会为您创建一个SDK实例，并使用提供的环境变量对其进行配置.
 
 ```js
 // 这些命名导出 用于 创建/管理 根据 `AUTHOK_*` 环境变量配置的 SDK 实例
