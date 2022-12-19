@@ -7,7 +7,7 @@
   - [保护 服务端渲染(SSR)页面](#保护-服务端渲染ssr页面)
   - [保护客户端渲染(CSR)页面](#保护客户端渲染csr页面)
   - [保护 API 路由](#保护-api-路由)
-  - [Protecting pages with Middleware](#protecting-pages-with-middleware)
+  - [用中间件保护页面](#用中间件保护页面)
   - [Access an External API from an API Route](#access-an-external-api-from-an-api-route)
     - [获取刷新令牌(Refresh Token)](#获取刷新令牌refresh-token)
   - [创建自己的SDK实例](#创建自己的sdk实例)
@@ -216,11 +216,11 @@ export default withPageAuthRequired(function Products() {
 See a running example in the kitchen-sink example app, the [protected API route](./examples/kitchen-sink-example/pages/api/shows.ts) and
 the [frontend code to access the protected API](./examples/kitchen-sink-example/pages/shows.tsx).
 
-## Protecting pages with Middleware
+## 用中间件保护页面
 
-Protect your pages with Next.js Middleware.
+使用 Next.js 中间件来保护页面.
 
-To protect all your routes:
+保护所有路由:
 
 ```js
 // middleware.js
