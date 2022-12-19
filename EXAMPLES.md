@@ -212,8 +212,7 @@ export default withPageAuthRequired(function Products() {
 });
 ```
 
-See a running example in the kitchen-sink example app, the [protected API route](./examples/kitchen-sink-example/pages/api/shows.ts) and
-the [frontend code to access the protected API](./examples/kitchen-sink-example/pages/shows.tsx).
+可以查看 kitchen-sink 的运行示例, [被保护的 API路由](./examples/kitchen-sink-example/pages/api/shows.ts) 和 [前端代码 访问 被保护API](./examples/kitchen-sink-example/pages/shows.tsx).
 
 ## 用中间件保护页面
 
