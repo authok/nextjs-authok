@@ -143,11 +143,11 @@ export default async function login(req, res) {
 export default () => <a href="/api/custom-login">Login</a>;
 ```
 
-> Note: If you customize the login url you will need to set the environment variable `NEXT_PUBLIC_AUTHOK_LOGIN` to this custom value for `withPageAuthRequired` to work correctly. And if you customize the profile url, you will need to set the `NEXT_PUBLIC_AUTHOK_PROFILE` environment variable to this custom value for the `useUser` hook to work properly.
+> 注意: 如果你自定义了 登录 url, 你需要同时对应设置环境变量 `NEXT_PUBLIC_AUTHOK_LOGIN` 以确保 `withPageAuthRequired` 工作正常. 如果你自定义了 profile url, 你同样要设置 `NEXT_PUBLIC_AUTHOK_PROFILE` 以确保 `useUser` hook 工作正常.
 
 ## 保护 服务端渲染(SSR)页面
 
-Requests to `/pages/profile` without a valid session cookie will be redirected to the login page.
+如果没有携带有效 session cookie 请求 `/pages/profile`, 将会被重定向到登录页面.
 
 ```jsx
 // pages/profile.js
@@ -157,16 +157,15 @@ export default function Profile({ user }) {
   return <div>Hello {user.name}</div>;
 }
 
-// You can optionally pass your own `getServerSideProps` function into
-// `withPageAuthRequired` and the props will be merged with the `user` prop
+// 你可以可选的传递自定义的 `getServerSideProps` 函数 到 `withPageAuthRequired`, 这样 props 会和 `user` prop 进行合并.
 export const getServerSideProps = withPageAuthRequired();
 ```
 
-See a running example of an [SSR protected page](./examples/kitchen-sink-example/pages/profile-ssr.tsx) in the kitchen-sink example app or refer to the full list of configuration options for `withPageAuthRequired` [here](https://authok.github.io/nextjs-authok/modules/helpers_with_page_auth_required.html#withpageauthrequiredoptions).
+参考 kitchen-sink 示例应用中的 [SSR 保护的页面](./examples/kitchen-sink-example/pages/profile-ssr.tsx)， 或参考 `withPageAuthRequired` 的完整配置清单[这里](https://authok.github.io/nextjs-authok/modules/helpers_with_page_auth_required.html#withpageauthrequiredoptions).
 
 ## 保护客户端渲染(CSR)页面
 
-Requests to `/pages/profile` without a valid session cookie will be redirected to the login page.
+如果没有携带有效 session cookie 请求 `/pages/profile`， 将会被重定向到登录页面.
 
 ```jsx
 // pages/profile.js
@@ -177,7 +176,7 @@ export default withPageAuthRequired(function Profile({ user }) {
 });
 ```
 
-See a running example of a [CSR protected page](./examples/kitchen-sink-example/pages/profile.tsx) in the kitchen-sink example app.
+参考 kitchen-sink 示例应用中的 [CSR 保护的页面](./examples/kitchen-sink-example/pages/profile.tsx).
 
 ## 保护 API 路由
 
