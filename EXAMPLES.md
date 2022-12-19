@@ -29,7 +29,7 @@ AUTHOK_CLIENT_ID='CLIENT_ID'
 AUTHOK_CLIENT_SECRET='CLIENT_SECRET'
 ```
 
-Create a [dynamic API route handler](https://nextjs.org/docs/api-routes/dynamic-api-routes) at `/pages/api/auth/[...authok].js`.
+创建一个 [动态 API 路由处理程序](https://nextjs.org/docs/api-routes/dynamic-api-routes) at `/pages/api/auth/[...authok].js`.
 
 ```js
 import { handleAuth } from '@authok/nextjs-authok';
@@ -37,9 +37,9 @@ import { handleAuth } from '@authok/nextjs-authok';
 export default handleAuth();
 ```
 
-This will create the following urls: `/api/auth/login`, `/api/auth/callback`, `/api/auth/logout` and `/api/auth/me`.
+这将会创建如下 urls: `/api/auth/login`, `/api/auth/callback`, `/api/auth/logout` and `/api/auth/me`.
 
-Wrap your `pages/_app.jsx` component in the `UserProvider` component.
+在 `UserProvider` 组件中包装 `pages/_app.jsx` 组件.
 
 ```jsx
 // pages/_app.jsx
