@@ -287,9 +287,9 @@ import { handleAuth, handleLogin } from '@authok/nextjs-authok';
 export default handleAuth({
   login: handleLogin({
     authorizationParams: {
-      audience: 'https://api.example.com/products', // or AUTHOK_AUDIENCE
-      // Add the `offline_access` scope to also get a Refresh Token
-      scope: 'openid profile email read:products' // or AUTHOK_SCOPE
+      audience: 'https://api.example.com/products', // 或 AUTHOK_AUDIENCE
+      // 添加 `offline_access` scope 来获得 刷新令牌
+      scope: 'openid profile email read:products' // 或 AUTHOK_SCOPE
     }
   })
 });
@@ -302,8 +302,7 @@ export default handleAuth({
 import { getAccessToken, withApiAuthRequired } from '@authok/nextjs-authok';
 
 export default withApiAuthRequired(async function products(req, res) {
-  // If your access token is expired and you have a refresh token
-  // `getAccessToken` will fetch you a new one using the `refresh_token` grant
+  // 如果 访问令牌 过期，若 刷新令牌存在的话，`getAccessToken` 会使用 `refresh_token` 授权来获取一个新的访问令牌 
   const { accessToken } = await getAccessToken(req, res, {
     scopes: ['read:products']
   });
