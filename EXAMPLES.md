@@ -280,7 +280,7 @@ export default authok.withMiddlewareAuthRequired(async function middleware(req) 
 
 ## 从API路由访问外部API
 
-Get an access token by providing your API's audience and scopes. You can pass them directly to the `handlelogin` method, or use environment variables instead.
+提供 API的 audience 和 scopes 来获取 访问令牌. 你可以把它们直接传递给 `handlelogin` 方法, 或使用环境变量替代.
 
 ```js
 // pages/api/auth/[...authok].js
