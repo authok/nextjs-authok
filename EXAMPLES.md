@@ -329,8 +329,7 @@ export default withApiAuthRequired(async function products(req, res) {
 When you use the named exports, the SDK creates an instance of the SDK for you and configures it with the provided environment variables.
 
 ```js
-// These named exports create and manage their own instance of the SDK configured with
-// the provided `AUTHOK_*` environment variables
+// 这些命名导出 用于 创建/管理 根据 `AUTHOK_*` 环境变量配置的 SDK 实例
 import {
   handleAuth,
   handleLogin,
