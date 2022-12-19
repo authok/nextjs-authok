@@ -13,6 +13,7 @@
   - [创建自己的SDK实例](#创建自己的sdk实例)
 - [添加注册处理程序](#添加注册处理程序)
   - [Use with Base Path and Internationalized Routing](#use-with-base-path-and-internationalized-routing)
+  - [把基本路径和国际化路由一起使用](#把基本路径和国际化路由一起使用)
 
 所有例子都可以在 [Kitchen Sink 示例应用](./examples/kitchen-sink-example) 中查看.
 
@@ -420,12 +421,13 @@ Users can then sign up using the signup handler.
 ```
 
 ## Use with Base Path and Internationalized Routing
+## 把基本路径和国际化路由一起使用
 
-With Next.js you can deploy a Next.js application under a sub-path of a domain using [Base Path](https://nextjs.org/docs/api-reference/next.config.js/basepath) and serve internationalized (i18n) routes using [Internationalized Routing](https://nextjs.org/docs/advanced-features/i18n-routing).
+你可以把 Next.js应用部署在一个域名子路径, 对应[Base Path](https://nextjs.org/docs/api-reference/next.config.js/basepath), 并采用[Internationalized Routing](https://nextjs.org/docs/advanced-features/i18n-routing)提供国际化(i18n)路由.
 
-If you use these features the urls of your application will change and so the urls to the nextjs-authok routes will change. To accommodate this there are various places in the SDK that you can customise the url.
+如果要使用这些特性，应用的url会发生一些变化，对应 nextjs-authok的陆游也会相应变化. 为了相适应，可以自定义 SDK中的相关 url.
 
-For example if `basePath: '/foo'` you should prepend this to the `loginUrl` and `profileUrl` specified in your `AuthokProvider`
+例如 `basePath: '/foo'`, 你需要对应调整 `AuthokProvider` 的 `loginUrl` 和 `profileUrl`:
 
 ```jsx
 // _app.jsx
@@ -438,21 +440,22 @@ function App({ Component, pageProps }) {
 }
 ```
 
-Also, any links to login or logout should include the `basePath`:
+同样, 登录 和 注销 的url也必须包含 `basePath`:
 
 ```html
-<a href="/foo/api/auth/login">Login</a><br />
-<a href="/foo/api/auth/logout">Logout</a>
+<a href="/foo/api/auth/login">登录</a><br />
+<a href="/foo/api/auth/logout">注销</a>
 ```
 
-You should configure [baseUrl](https://authok.github.io/nextjs-authok/interfaces/config.baseconfig.html#baseurl) (or the `AUTHOK_BASE_URL` environment variable) eg
+你还可以配置 [baseUrl](https://authok.github.io/nextjs-authok/interfaces/config.baseconfig.html#baseurl) (或者 `AUTHOK_BASE_URL` 环境变量):
 
 ```shell
 # .env.local
 AUTHOK_BASE_URL=http://localhost:3000/foo
 ```
 
-For any pages that are protected with the Server Side [withPageAuthRequired](https://authok.github.io/nextjs-authok/modules/helpers_with_page_auth_required.html#withpageauthrequired) you should update the `returnTo` parameter depending on the `basePath` and `locale` if necessary.
+[withPageAuthRequired]保护的任何页面，如果需要，应根据“basePath”和“locale”更新“returnTo”参数
+对于受服务器端[withPageAuthRequired](https://authok.github.io/nextjs-authok/modules/helpers_with_page_auth_required.html#withpageauthrequired) 保护的任何页面，应根据 `basePath` 和 `locale` 来更新`returnTo` 参数.
 
 ```js
 // ./pages/my-ssr-page.jsx
