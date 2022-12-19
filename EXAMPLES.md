@@ -3,7 +3,7 @@
 - [示例](#示例)
   - [基本设置](#基本设置)
   - [自定义处理器行为](#自定义处理器行为)
-  - [Use custom auth urls](#use-custom-auth-urls)
+  - [使用自定义的身份验证URL](#使用自定义的身份验证url)
   - [保护 服务端渲染(SSR)页面](#保护-服务端渲染ssr页面)
   - [保护客户端渲染(CSR)页面](#保护客户端渲染csr页面)
   - [保护 API 路由](#保护-api-路由)
@@ -119,11 +119,11 @@ export default handleAuth({
 });
 ```
 
-## Use custom auth urls
+## 使用自定义的身份验证URL
 
-Instead of (or in addition to) creating `/pages/api/auth/[...authok].js` to handle all requests, you can create them individually at different urls.
+除了创建 `/pages/api/auth/[...authok].js` 来处理所有请求, 你还可以用不同 url 单独创建它们.
 
-Eg for login:
+例如, 登录:
 
 ```js
 // api/custom-login.js
