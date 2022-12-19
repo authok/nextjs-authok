@@ -58,7 +58,7 @@ export default function App({ Component, pageProps }) {
 }
 ```
 
-Check the user's authentication state and log them in or out from the front end using the `useUser` hook.
+使用 `useUser` hook 检查用户的身份状态，并从前端登录或注销.
 
 ```jsx
 // pages/index.jsx
