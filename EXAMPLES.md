@@ -180,7 +180,7 @@ export default withPageAuthRequired(function Profile({ user }) {
 
 ## 保护 API 路由
 
-Requests to `/pages/api/protected` without a valid session cookie will fail with `401`.
+如果没有携带有效 session cookie 请求 `/pages/api/protected` 将会返回 `401` 错误.
 
 ```js
 // pages/api/protected.js
@@ -192,7 +192,7 @@ export default withApiAuthRequired(async function myApiRoute(req, res) {
 });
 ```
 
-Then you can access your API from the frontend with a valid session cookie.
+然后，您可以使用有效的会话cookie从前端访问API.
 
 ```jsx
 // pages/products
