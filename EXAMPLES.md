@@ -1,7 +1,7 @@
-# Examples
+# 示例
 
-- [Examples](#examples)
-  - [Basic Setup](#basic-setup)
+- [示例](#示例)
+  - [基本设置](#基本设置)
   - [Customize handlers behavior](#customize-handlers-behavior)
   - [Use custom auth urls](#use-custom-auth-urls)
   - [Protecting a Server-Side Rendered (SSR) Page](#protecting-a-server-side-rendered-ssr-page)
@@ -14,11 +14,11 @@
 - [Add a signup handler](#add-a-signup-handler)
   - [Use with Base Path and Internationalized Routing](#use-with-base-path-and-internationalized-routing)
 
-All examples can be seen running in the [Kitchen Sink example app](./examples/kitchen-sink-example).
+所有例子都可以在 [Kitchen Sink 示例应用](./examples/kitchen-sink-example) 中查看.
 
-## Basic Setup
+## 基本设置
 
-Configure the required options in an `.env.local` file in the root of your application:
+在应用程序根目录的 `.env.local` 文件中配置所需选项:
 
 ```sh
 AUTHOK_SECRET='LONG_RANDOM_VALUE'
