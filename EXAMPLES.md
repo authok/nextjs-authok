@@ -2,11 +2,11 @@
 
 - [示例](#示例)
   - [基本设置](#基本设置)
-  - [Customize handlers behavior](#customize-handlers-behavior)
+  - [自定义处理器行为](#自定义处理器行为)
   - [Use custom auth urls](#use-custom-auth-urls)
-  - [Protecting a Server-Side Rendered (SSR) Page](#protecting-a-server-side-rendered-ssr-page)
-  - [Protecting a Client-Side Rendered (CSR) Page](#protecting-a-client-side-rendered-csr-page)
-  - [Protect an API Route](#protect-an-api-route)
+  - [保护 服务端渲染(SSR)页面](#保护-服务端渲染ssr页面)
+  - [保护客户端渲染(CSR)页面](#保护客户端渲染csr页面)
+  - [保护 API 路由](#保护-api-路由)
   - [Protecting pages with Middleware](#protecting-pages-with-middleware)
   - [Access an External API from an API Route](#access-an-external-api-from-an-api-route)
     - [获取刷新令牌(Refresh Token)](#获取刷新令牌refresh-token)
@@ -81,11 +81,11 @@ export default () => {
 };
 ```
 
-Have a look at the `basic-example` app [./examples/basic-example](./examples/basic-example).
+查看 `basic-example` 应用 [./examples/basic-example](./examples/basic-example).
 
-## Customize handlers behavior
+## 自定义处理器行为
 
-Pass custom parameters to the auth handlers or add your own logging and error handling.
+将自定义参数传递给 身份验证处理器 或 添加自己的 日志 和 错误处理.
 
 ```js
 // pages/api/auth/[...authok].js
@@ -145,7 +145,7 @@ export default () => <a href="/api/custom-login">Login</a>;
 
 > Note: If you customize the login url you will need to set the environment variable `NEXT_PUBLIC_AUTHOK_LOGIN` to this custom value for `withPageAuthRequired` to work correctly. And if you customize the profile url, you will need to set the `NEXT_PUBLIC_AUTHOK_PROFILE` environment variable to this custom value for the `useUser` hook to work properly.
 
-## Protecting a Server-Side Rendered (SSR) Page
+## 保护 服务端渲染(SSR)页面
 
 Requests to `/pages/profile` without a valid session cookie will be redirected to the login page.
 
@@ -164,7 +164,7 @@ export const getServerSideProps = withPageAuthRequired();
 
 See a running example of an [SSR protected page](./examples/kitchen-sink-example/pages/profile-ssr.tsx) in the kitchen-sink example app or refer to the full list of configuration options for `withPageAuthRequired` [here](https://authok.github.io/nextjs-authok/modules/helpers_with_page_auth_required.html#withpageauthrequiredoptions).
 
-## Protecting a Client-Side Rendered (CSR) Page
+## 保护客户端渲染(CSR)页面
 
 Requests to `/pages/profile` without a valid session cookie will be redirected to the login page.
 
@@ -179,7 +179,7 @@ export default withPageAuthRequired(function Profile({ user }) {
 
 See a running example of a [CSR protected page](./examples/kitchen-sink-example/pages/profile.tsx) in the kitchen-sink example app.
 
-## Protect an API Route
+## 保护 API 路由
 
 Requests to `/pages/api/protected` without a valid session cookie will fail with `401`.
 
