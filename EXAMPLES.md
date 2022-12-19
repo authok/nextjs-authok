@@ -47,8 +47,7 @@ import React from 'react';
 import { UserProvider } from '@authok/nextjs-authok/client';
 
 export default function App({ Component, pageProps }) {
-  // You can optionally pass the `user` prop from pages that require server-side
-  // rendering to prepopulate the `useUser` hook.
+  // 你可以在需要服务端渲染的页面中 选择性传递 `user` 属性， 以预先执行 `useUser` hook.
   const { user } = pageProps;
 
   return (
