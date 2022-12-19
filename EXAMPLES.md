@@ -351,7 +351,7 @@ import {
 - 您可能需要创建自己的实例进行测试
 - 您可能不想使用环境变量配置 secret（例如使用 CredStash 或 AWS的密钥管理服务）
 
-In this case you can use the [initAuthok](https://authok.github.io/nextjs-authok/modules/instance.html) method to create an instance.
+在这种情况下，可以使用[initAuthok](https://authok.github.io/nextjs-authok/modules/instance.html) 方法来创建实例.
 
 ```js
 // utils/authok.js
