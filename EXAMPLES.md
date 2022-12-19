@@ -240,9 +240,9 @@ export const config = {
 };
 ```
 
-For more info see: https://nextjs.org/docs/advanced-features/middleware#matching-paths
+更多信息可参考: https://nextjs.org/docs/advanced-features/middleware#matching-paths
 
-To run custom middleware for authenticated users:
+运行自定义中间件来进行用户身份验证:
 
 ```js
 // middleware.js
@@ -256,7 +256,7 @@ export default withMiddlewareAuthRequired(async function middleware(req) {
 });
 ```
 
-For using middleware with your own instance of the SDK:
+在你自己创建的SDK实例上使用中间件:
 
 ```js
 // middleware.js
