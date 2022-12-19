@@ -462,8 +462,7 @@ AUTHOK_BASE_URL=http://localhost:3000/foo
 export default MySsrPage = () => <></>;
 
 const getFullReturnTo = (ctx) => {
-  // TODO: implement getFullReturnTo based on the ctx.resolvedUrl, ctx.locale
-  // and your next.config.js's basePath and i18n settings.
+  // TODO: 基于 ctx.resolvedUrl, ctx.locale, 以及 next.config.js 中的 basePath 和 i18n 设置 来实现 getFullReturnTo.
   return '/foo/en-US/my-ssr-page';
 };
 
