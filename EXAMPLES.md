@@ -362,30 +362,29 @@ export default initAuthok({
 });
 ```
 
-Now rather than using the named exports, you can use the instance methods directly.
+现在，您可以直接使用实例方法，而不是使用命名导出.
 
 ```js
 // pages/api/auth/[...authok].js
 import authok from '../../../utils/authok';
 
-// Use the instance method
+// 使用实例方法
 export default authok.handleAuth();
 ```
 
-> Note: You should not use the instance methods in combination with the named exports,
-> otherwise you will be creating multiple instances of the SDK. For example:
+> 注意: 你不应该将 实例方法 与 命名导出 结合使用,
+> 否则这会导致创建多个 SDK 实例. 例如:
 
 ```js
-// DON'T Mix instance methods and named exports
+// 不要混用 实例方法 和 命名导出
 import authok from '../../../utils/authok';
 import { handleLogin } from '@authok/nextjs-authok';
 
 export default authok.handleAuth({
-  // <= instance method
+  // <= 实例方法
   async login(req, res) {
     try {
-      // `authok.handleAuth` and `handleLogin` will be using separate instances
-      // You should use `authok.handleLogin` instead
+      // `authok.handleAuth` 和 `handleLogin` 将使用不同实例. 这里你需要使用 `authok.handleLogin` 代替.
       await handleLogin(req, res); // <= named export
     } catch (error) {
       res.status(error.status || 400).end(error.message);
